@@ -1,48 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Vue 3 Share Page</title>
-  <meta name="description" content="Description for default-slug" />
-  <meta property="og:title" content="Title for default-slug" />
-  <meta property="og:description" content="Description for default-slug" />
-  <meta property="og:image" content="https://images.khmer24.co/25-07-14/s--1983-built--1181135175247431343247132-c.jpg" />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://images.khmer24.co/25-07-14/s--1983-built--1181135175247431343247132-c.jpg" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Title for default-slug" />
-  <meta name="twitter:description" content="Description for default-slug" />
-  <meta name="twitter:image" content="https://images.khmer24.co/25-07-14/s--1983-built--1181135175247431343247132-c.jpg" />
-  <style>
-    .share-page {
-      padding: 2rem;
-      text-align: center;
-    }
-  </style>
-</head>
-
-<body>
-  <div id="app" class="share-page">
-    <h1>{{ title }}</h1>
-    <p>{{ description }}</p>
-    <img :src="image" alt="Thumbnail" style="max-width:400px;" />
-  </div>
-
-  <!-- Vue 3 CDN -->
-  <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
-  <script>
-    const { createApp } = Vue;
-
-    createApp({
-      data() {
-        return {
-          title: 'Title for default-slug',
-          description: 'Description for default-slug',
-          image: 'https://images.khmer24.co/25-07-14/s--1983-built--1181135175247431343247132-c.jpg'
-        };
-      }
-    }).mount('#app');
-  </script>
-</body>
+  <head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vite App</title>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
 </html>

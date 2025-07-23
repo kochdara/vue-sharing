@@ -1,9 +1,9 @@
 <script setup>
-import SharePage from './SharePage.vue';
+import TheWelcome from '../components/TheWelcome.vue'
 </script>
 
 <template>
   <main>
-    <SharePage />
+    <TheWelcome />
   </main>
 </template>
