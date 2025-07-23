@@ -7,7 +7,7 @@
 </template>
 
 <script setup>
-import { useHead } from '@unhead/vue'
+import { useHead } from '@vueuse/head'
 
 useHead({
   title: 'Title for default-slug',
