@@ -26,4 +26,5 @@ useHead({
 
 <template>
   <h1>My Awesome Article</h1>
+  <router-view />
 </template>
