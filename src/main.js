@@ -11,11 +11,11 @@ const routes = [
     },
   {
     path: '/',
-    component: () => import('./pages/Home.vue')
+    component: () => import('./pages/index.page.vue')
   },
   {
     path: '/about',
-    component: () => import('./pages/About.vue')
+    component: () => import('./pages/about.page.vue')
   }
 ]
 

@@ -44,9 +44,13 @@ async function createServer() {
       const { app: vueApp, head } = await render(url)
 
       const appHtml = await renderToString(vueApp)
+      // For newer @vueuse/head versions:
+      const headHtml = typeof head.renderHeadToString === 'function' 
+        ? head.renderHeadToString()
+        : head.headTags || ''
 
       const html = template
-        .replace(`<!--app-head-->`, head.renderHead().headTags)
+        .replace(`<!--app-head-->`, headHtml)
         .replace(`<!--app-html-->`, appHtml)
 
       res.status(200).set({ 'Content-Type': 'text/html' }).end(html)

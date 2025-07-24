@@ -9,9 +9,11 @@
     "serve": "node server.js"
   },
   "dependencies": {
+    "@netlify/vite-plugin": "^2.5.0",
     "@vue/server-renderer": "^3.4.21",
     "@vueuse/head": "^1.0.0",
     "express": "^4.18.2",
+    "vite-plugin-ssr": "^0.4.142",
     "vue": "^3.4.21",
     "vue-router": "^4.5.1"
   },

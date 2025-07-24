@@ -1,19 +1,15 @@
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
+import ssr from 'vite-plugin-ssr/plugin'
+import netlify from "@netlify/vite-plugin"
 
-export default defineConfig(({ command, ssrBuild }) => {
-  const isSSR = !!ssrBuild
-
+export default defineConfig(({ ssrBuild }) => {
   return {
-    plugins: [vue()],
+    plugins: [vue(), ssr(), netlify()],
     build: {
-      outDir: isSSR ? 'dist/server' : 'dist/client',
-      ssr: isSSR ? 'src/entry-server.js' : false,
-      rollupOptions: isSSR
-        ? {} // ✅ SSR: do not include input
-        : {
-            input: './index.html' // ✅ Client: use index.html
-          }
+      outDir: ssrBuild ? 'dist/server' : 'dist/client',
+      ssr: ssrBuild ? 'src/entry-server.js' : false,
+      // remove rollupOptions.input completely!
     },
     ssr: {
       noExternal: ['@vueuse/head']
